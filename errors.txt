@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 23: end of line expected.
-    show screen info "Testy test" "Bleh"
-                     ^
+File "game/script.rpy", line 23: unexpected EOF while parsing
+    if (characterA.hairBack == 1):
+    
+
+File "game/script.rpy", line 26: unexpected EOF while parsing
+    if (characterA.hairBack == 2):
+    
 
 Ren'Py Version: Ren'Py 7.4.8.1895
-Sat Sep 18 11:03:22 2021
+Sat Sep 18 16:00:39 2021
