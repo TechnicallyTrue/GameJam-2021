@@ -16,13 +16,11 @@ label start:
 
     scene bg room
 
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
-
     show table
 
     show cat neutral behind table
+
+    show screen info
 
     # These display lines of dialogue.
 
@@ -32,6 +30,7 @@ label start:
 
     menu:
         "That seems bad.":
+
             a "I do not care."
 
         "Great! I crave death.":

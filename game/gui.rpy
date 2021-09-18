@@ -276,6 +276,19 @@ define gui.slot_spacing = 10
 define gui.main_menu_text_xalign = 1.0
 
 
+## Info ########################################################################
+##
+## The information card for each character
+
+define gui.info_card_width = 420
+define gui.info_card_height = None
+define gui.info_card_tile = True
+define gui.info_card_xalign = 1.0
+define gui.info_card_borders = Borders(100, 60, 100, 60)
+define gui.info_card_text_font = gui.text_font
+define gui.info_card_text_size = gui.text_size
+define gui.info_card_text_xalign = 0.5
+
 ## Frames ######################################################################
 ##
 ## These variables control the look of frames that can contain user interface
@@ -470,6 +483,3 @@ init python:
 
         gui.nvl_button_width = 1240
         gui.nvl_button_xpos = 20
-
-
-

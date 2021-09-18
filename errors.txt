@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/screens.rpy", line 261: u'top_padding' is not a keyword argument or valid child for the vbox statement.
+    top_padding 60
+               ^
+
+Ren'Py Version: Ren'Py 7.4.8.1895
+Sat Sep 18 09:18:06 2021

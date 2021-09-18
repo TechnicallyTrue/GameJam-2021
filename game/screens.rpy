@@ -235,49 +235,88 @@ style choice_button_text is default:
     properties gui.button_text_properties("choice_button")
 
 
-## Quick Menu screen ###########################################################
+## Info screen #################################################################
 ##
-## The quick menu is displayed in-game to provide easy access to the out-of-game
-## menus.
+## This screen is used to display the info card for each character.
 
-screen quick_menu():
+# style info_card is card:
+#     xsize: gui.info_card_width
+#     ysize: gui.info_card_height
+#     xalign: gui.info_card_xalign
+#     background: Frame("gui/TestBox.png", gui.info_card_borders, tile=gui.info_card_tile)
 
-    ## Ensure this appears on top of other screens.
-    zorder 100
+#style info_vbox is vbox:
 
-    if quick_menu:
+screen info:
+#    style_prefix "info"
 
-        hbox:
-            style_prefix "quick"
+    window:
+        xsize 420
+        ysize gui.info_card_height
+        xalign gui.info_card_xalign
+        ypos 0.35
+        yanchor 0.5
+        top_padding 60
+        bottom_padding 60
+        background Frame("gui/TestBox.png", gui.info_card_borders, tile=gui.info_card_tile)
+        vbox:
+            xanchor 0.0
+            xalign 0.3
+            spacing 22
 
-            xalign 0.5
-            yalign 1.0
+            label "Test0"
+            label "Test 1"
+            label "Test  2"
+            label "Test   3"
 
-            textbutton _("Back") action Rollback()
-            textbutton _("History") action ShowMenu('history')
-            textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("Auto") action Preference("auto-forward", "toggle")
-            textbutton _("Save") action ShowMenu('save')
-            textbutton _("Q.Save") action QuickSave()
-            textbutton _("Q.Load") action QuickLoad()
-            textbutton _("Prefs") action ShowMenu('preferences')
+## Info Button screen ##########################################################
+##
+## The info button allows the user to show/hide the info card.
 
 
-## This code ensures that the quick_menu screen is displayed in-game, whenever
-## the player has not explicitly hidden the interface.
-init python:
-    config.overlay_screens.append("quick_menu")
-
-default quick_menu = True
-
-style quick_button is default
-style quick_button_text is button_text
-
-style quick_button:
-    properties gui.button_properties("quick_button")
-
-style quick_button_text:
-    properties gui.button_text_properties("quick_button")
+# ## Quick Menu screen ###########################################################
+# ##
+# ## The quick menu is displayed in-game to provide easy access to the out-of-game
+# ## menus.
+#
+# screen quick_menu():
+#
+#     ## Ensure this appears on top of other screens.
+#     zorder 100
+#
+#     if quick_menu:
+#
+#         hbox:
+#             style_prefix "quick"
+#
+#             xalign 0.5
+#             yalign 1.0
+#
+#             textbutton _("Back") action Rollback()
+#             textbutton _("History") action ShowMenu('history')
+#             textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
+#             textbutton _("Auto") action Preference("auto-forward", "toggle")
+#             textbutton _("Save") action ShowMenu('save')
+#             textbutton _("Q.Save") action QuickSave()
+#             textbutton _("Q.Load") action QuickLoad()
+#             textbutton _("Prefs") action ShowMenu('preferences')
+#
+#
+# ## This code ensures that the quick_menu screen is displayed in-game, whenever
+# ## the player has not explicitly hidden the interface.
+# init python:
+#     config.overlay_screens.append("quick_menu")
+#
+# default quick_menu = True
+#
+# style quick_button is default
+# style quick_button_text is button_text
+#
+# style quick_button:
+#     properties gui.button_properties("quick_button")
+#
+# style quick_button_text:
+#     properties gui.button_text_properties("quick_button")
 
 
 ################################################################################
