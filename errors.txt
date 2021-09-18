@@ -2,9 +2,10 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 23: end of line expected.
-    show screen info "Testy test" "Bleh"
-                     ^
+File "game/lists.rpy", line 12: invalid syntax
+                "Rook", "Knight"),
+                      ^
+    
 
 Ren'Py Version: Ren'Py 7.4.8.1895
-Sat Sep 18 11:03:22 2021
+Sat Sep 18 16:49:59 2021

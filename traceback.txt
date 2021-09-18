@@ -1,40 +1,38 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-After initialization, but before game start.
-  File "renpy/common/00start.rpy", line 80, in _init_language
-    renpy.change_language(language)
-  File "renpy/common/00stylepreferences.rpy", line 124, in _m1_00stylepreferences__change_language
-    __update()
-  File "renpy/common/00stylepreferences.rpy", line 96, in _m1_00stylepreferences__update
-    renpy.style.rebuild()
-Exception: style info_card is part of a loop of recursive styles (is one of its own parents).
+While running game code:
+  File "game/classes.rpy", line 1, in script
+    init python:
+  File "game/classes.rpy", line 1, in script
+    init python:
+  File "game/classes.rpy", line 22, in <module>
+    class Lists:
+  File "game/classes.rpy", line 24, in Lists
+    Fact("Likes cats"), [
+TypeError: __init__() takes exactly 3 arguments (2 given)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
   File "/home/sean/Downloads/renpy-7.4.8-sdk/renpy/bootstrap.py", line 326, in bootstrap
     renpy.main.main()
-  File "/home/sean/Downloads/renpy-7.4.8-sdk/renpy/main.py", line 617, in main
-    run(restart)
-  File "/home/sean/Downloads/renpy-7.4.8-sdk/renpy/main.py", line 78, in run
-    renpy.translation.init_translation()
-  File "/home/sean/Downloads/renpy-7.4.8-sdk/renpy/translation/__init__.py", line 561, in init_translation
-    renpy.store._init_language() # @UndefinedVariable
-  File "renpy/common/00start.rpy", line 80, in _init_language
-    renpy.change_language(language)
-  File "/home/sean/Downloads/renpy-7.4.8-sdk/renpy/translation/__init__.py", line 650, in change_language
-    i()
-  File "renpy/common/00stylepreferences.rpy", line 124, in _m1_00stylepreferences__change_language
-    __update()
-  File "renpy/common/00stylepreferences.rpy", line 96, in _m1_00stylepreferences__update
-    renpy.style.rebuild()
-  File "style.pyx", line 795, in renpy.style.rebuild
-  File "style.pyx", line 788, in renpy.style.build_styles
-  File "style.pyx", line 680, in renpy.style.build_style
-  File "style.pyx", line 671, in renpy.style.build_style
-Exception: style info_card is part of a loop of recursive styles (is one of its own parents).
+  File "/home/sean/Downloads/renpy-7.4.8-sdk/renpy/main.py", line 515, in main
+    renpy.game.context().run(node)
+  File "game/classes.rpy", line 1, in script
+    init python:
+  File "game/classes.rpy", line 1, in script
+    init python:
+  File "/home/sean/Downloads/renpy-7.4.8-sdk/renpy/ast.py", line 923, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "/home/sean/Downloads/renpy-7.4.8-sdk/renpy/python.py", line 2235, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/classes.rpy", line 22, in <module>
+    class Lists:
+  File "game/classes.rpy", line 24, in Lists
+    Fact("Likes cats"), [
+TypeError: __init__() takes exactly 3 arguments (2 given)
 
 Linux-5.4.0-84-generic-x86_64-with-debian-bullseye-sid
 Ren'Py 7.4.8.1895
 GameJam2021 1.0
-Sat Sep 18 03:16:12 2021
+Sat Sep 18 16:36:51 2021

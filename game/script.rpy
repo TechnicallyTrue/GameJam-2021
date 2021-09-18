@@ -3,7 +3,18 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define a = Character("Cat in Labcoat")
+define a = DynamicCharacter("namevar")
+
+# python:
+#     facts = [
+#         Fact("Likes cats"), [
+#             Question("Are you a cat person or a dog person?", "Cat person",
+#                     "Dog person"),
+#             Question("Do you think cats are secretly evil?", "No", "Yes"),
+#             Question("Would you be open to adopting a cat?", "Yes", "No")
+#         ]
+#     ]
+
 
 
 # The game starts here.
@@ -17,6 +28,8 @@ label start:
     scene bg room
 
     show table
+
+    $ namevar = "Man with Covid"
 
     show cat neutral behind table
 
@@ -37,7 +50,15 @@ label start:
 
             a "Well that works out for both of us."
 
+            $ namevar = "Old Character"
+
     "The cat murders you."
+
+    define b = Character("New Character")
+
+    b "Hello! Oh, am I interrupting something?"
+
+    a "Not really, no."
 
     # This ends the game.
 
