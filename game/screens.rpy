@@ -256,7 +256,7 @@ style choice_button_text is default:
 
 #style info_vbox is vbox:
 
-screen info:
+screen info(name, facts):
 #    style_prefix "info"
 
     window:
@@ -273,10 +273,9 @@ screen info:
             xalign 0.3
             spacing 22
 
-            label "Test0"
-            label "Test 1"
-            label "Test  2"
-            label "Test   3"
+            text name
+            for fact in facts:
+                text fact
 
 ## Info Button screen ##########################################################
 ##

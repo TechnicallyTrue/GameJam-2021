@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 261: u'top_padding' is not a keyword argument or valid child for the vbox statement.
-    top_padding 60
-               ^
+File "game/script.rpy", line 23: end of line expected.
+    show screen info "Testy test" "Bleh"
+                     ^
 
 Ren'Py Version: Ren'Py 7.4.8.1895
-Sat Sep 18 09:18:06 2021
+Sat Sep 18 11:03:22 2021

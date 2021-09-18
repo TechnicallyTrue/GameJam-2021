@@ -20,7 +20,7 @@ label start:
 
     show cat neutral behind table
 
-    show screen info
+    show screen info ("Testy test", ["A", "B", "C"])
 
     # These display lines of dialogue.
 
