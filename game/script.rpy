@@ -81,7 +81,7 @@ label start:
 
     #show cat neutral behind table
 
-    show screen info ("Testy test", ["A", "B", "C"])
+    show screen info (char1.name, char1.facts)
 
     # These display lines of dialogue.
 

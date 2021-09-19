@@ -269,13 +269,13 @@ screen info(name, facts):
         bottom_padding 60
         background Frame("gui/TestBox.png", gui.info_card_borders, tile=gui.info_card_tile)
         vbox:
-            xanchor 0.0
-            xalign 0.3
+            xanchor 0.5
+            xalign 0.5
             spacing 22
 
             text name
             for fact in facts:
-                text fact
+                text fact.f_text
 
 ## Info Button screen ##########################################################
 ##
