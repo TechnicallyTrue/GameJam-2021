@@ -19,3 +19,5 @@ init python:
             Question("Is your place well-ventilated?", "Yes", "No")
         ])
     ]
+
+    names = ["Aiden", "Alex", "Sam", "Pat", "Kelly", "Kris"]
