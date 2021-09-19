@@ -116,7 +116,14 @@ init python:
     ]
 
     names = ["Aiden", "Alex", "Sam", "Pat", "Kelly", "Kris", "Lee", "Shaun",
-             "Steph", "Jasper", "Sky", "River"]
+             "Steph", "Jasper", "Sky", "River", "Charlie", "Khaleesi", "Max",
+             "Tony", "Avery", "Emrey", "Ari", "Cameron", "Sam", "Tatum",
+             "Corey", "Blake", "Casey", "Dylan", "Marion", "Parker", "Spencer",
+             "Hayden", "Rowan", "Phoenix", "Jessie", "Jackie", "Ollie", "Jodie",
+             "Kerry", "Tracy", "Noel", "Rene", "Jan", "Robbie", "Remy", "Milan",
+             "Gerry", "Santana", "Hunter", "Elliot", "Jude", "Aubrey", "Gray",
+             "Jordan", "Morgan", "Reese", "Riley", "Robin", "Sawyer", "Shae",
+             "Shiloh"]
 
     hair_backs = ["back hair type 1", "back hair type 2", "back hair type 3", "back hair type 4", "back hair type 5"]
     hair_fronts = ["front hair type 1", "front hair type 2", "front hair type 3", "front hair type 4", "front hair type 5"]
