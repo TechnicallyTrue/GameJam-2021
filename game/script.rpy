@@ -204,7 +204,7 @@ label date_start:
             a "Well that's a shame. I like you less now."
             $ char1.affection -= 1
 
-    "Current affection: [char1.affection]"
+    #"Current affection: [char1.affection]"
 
 label check_end_condition:
 
