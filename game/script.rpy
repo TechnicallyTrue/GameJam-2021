@@ -5,7 +5,7 @@
 
 define a = DynamicCharacter("namevar")
 define c = Character("Dr. Whiskers")
-define imagex = 1.0
+define imagex = 0.6
 define imagey = 0.6
 define imagez = 0.75
 define config.gl2 = True
@@ -35,7 +35,7 @@ label start:
 
 label tutorial:
 
-    show cat neutral behind table
+    show cat behind table
 
     c "Hello, and welcome to the Cafe Gamophobia!"
     c "I'm Dr. Whiskers, and I've got a PhD in ~love~"
@@ -367,7 +367,7 @@ label bad_game_over:
     scene bg room
     show table
 
-    show cat neutral behind table
+    show cat behind table
 
     c "Hi there! Sorry, but it seems you're not mixing well with some of the others here."
     c "Maybe try your luck another day."
