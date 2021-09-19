@@ -31,27 +31,51 @@ label start:
     show table
 
     $ char1 = Char()
-    show expression char1.eye_colour as eye_colour
-    #show _char1.eye_colour
+    show expression char1.hair_back_fill as hair_back_fill behind table:
+        zoom imagez xalign imagex yalign imagey
+    show expression char1.hair_back_lines as hair_back_lines behind table:
+        zoom imagez xalign imagex yalign imagey
+    show expression char1.back_shirt_colour_a as back_shirt_colour_a behind table:
+        zoom imagez xalign imagex yalign imagey
+    show expression char1.back_shirt_colour_b as back_shirt_colour_b behind table:
+        zoom imagez xalign imagex yalign imagey
+    show expression char1.back_shirt_lines as back_shirt_lines behind table:
+        zoom imagez xalign imagex yalign imagey
+    #Draws back hair and body behind table
+    show expression char1.body_colour_a_N as body_colour_a_N:
+        zoom imagez xalign imagex yalign imagey
+    show expression char1.body_colour_b_N as body_colour_b_N:
+        zoom imagez xalign imagex yalign imagey
+    show expression char1.body_colour_c_N as body_colour_c_N:
+        zoom imagez xalign imagex yalign imagey
+    show expression char1.body_lines_N as body_lines_N:
+        zoom imagez xalign imagex yalign imagey
+    #body drawn
 
-    # show back_hair_colour_1 behind table:
-    #     zoom imagez xalign imagex yalign imagey
-    #     #matrixcolour HueMatrix(hairColour)
-    # show back_hair_lines_1 behind table:
-    #     xalign imagex yalign imagey zoom imagez
-    # show back_shirt_colour_a_1 behind table:
-    #     xalign imagex yalign imagey zoom imagez
-    # show back_shirt_colour_b_1 behind table:
-    #     xalign imagex yalign imagey zoom imagez
-    # show back_shirt_lines_1 behind table:
-    #     xalign imagex yalign imagey zoom imagez
-    # show body_colour_a_1 happy:
-    #     xalign imagex yalign imagey zoom imagez
-    # show body_colour_b_1 happy:
-    #     xalign imagex yalign imagey zoom imagez
-    # show body_colour_c_1 happy:
-    #     xalign imagex yalign imagey zoom imagez
-    # show body_lines_1 happy:
+    show expression char1.hair_front_fill as hair_front_fill1:
+        zoom imagez xalign imagex yalign imagey
+    #hair front fill 1
+    show expression char1.eye_back as eye_back:
+        zoom imagez xalign imagex yalign imagey
+    show expression char1.eye_fill as eye_fill:
+        zoom imagez xalign imagex yalign imagey
+    show expression char1.eye_lines as eye_lines:
+        zoom imagez xalign imagex yalign imagey
+    #show _char1.eye_colour
+    show expression char1.eyebrow_colour_N as eyebrow_colour_N:
+        zoom imagez xalign imagex yalign imagey
+    show expression char1.eyebrow_lines_N as eyebrow_lines_N:
+        zoom imagez xalign imagex yalign imagey
+    show expression char1.mouth_closed_N as mouth_closed_N:
+            zoom imagez xalign imagex yalign imagey
+    #face drawn
+    show expression char1.hair_front_fill as hair_front_fill2:
+        zoom imagez xalign imagex yalign imagey
+        alpha 0.5
+    show expression char1.hair_front_lines as hair_front_lines:
+        zoom imagez xalign imagex yalign imagey
+
+
     #     xalign imagex yalign imagey zoom imagez
     # show blush_1:
     #     alpha 0.5

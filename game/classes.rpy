@@ -63,13 +63,60 @@ init python:
 
     class Char:
         def __init__(self):
-            # self.face = random.choice(faces)  <--  this is the easiest way to randomly
-            # self.body = random.choice(bodies)      select something from a list
-            # self.hair_front = random.choice(hair_fronts)
-            # self.hair_back = random.choice(hair_backs)
-            # self.hair_colours = random.choice(hair_colours)
-            # self.eye_colour = random.choice(eye_colours)
-            self.eye_colour = "eyes_colour_2 b.png"
+            self.face = random.choice(faces)
+            if self.face == "face 1":
+                self.eyebrow_colour_N = "eyebrows_colour neut.png"
+                self.eyebrow_lines_N = "eyebrows_lines_1 neut.png"
+            if self.face == "face 2":
+                self.eyebrow_colour_N = "eyebrows_colour neut.png"
+                self.eyebrow_lines_N = "eyebrows_lines_2 neut.png"
+            self.body = random.choice(bodies)
+            if self.body == "body 1":
+                self.back_shirt_colour_a = "back_shirt_colour_a_1.png"
+                self.back_shirt_colour_b = "back_shirt_colour_b_1.png"
+                self.back_shirt_lines = "back_shirt_lines_1.png"
+                self.body_colour_a_N = "body_colour_a_1 neut.png"
+                #self.body_colour_a_A = "back_shirt_lines_1.png"
+                #self.body_colour_a_H = "back_shirt_lines_1.png"
+                self.body_colour_b_N = "body_colour_b_1 neut.png"
+                self.body_colour_c_N = "body_colour_c_1 neut.png"
+                self.body_lines_N= "body_lines_1 neut.png"
+            if self.body == "body 2":
+                self.back_shirt_colour_a = "back_shirt_colour_a_2.png"
+                self.back_shirt_colour_b = "back_shirt_colour_b_2.png"
+                self.back_shirt_lines = "back_shirt_lines_2.png"
+                self.body_colour_a_N = "body_colour_a_2 neut.png"
+                #self.body_colour_a_A = "back_shirt_lines_1.png"
+                #self.body_colour_a_H = "back_shirt_lines_1.png"
+                self.body_colour_b_N = "body_colour_b_2 neut.png"
+                self.body_colour_c_N = "body_colour_c_2 neut.png"
+                self.body_lines_N= "body_lines_2 neut.png"
+            self.hair_back = random.choice(hair_backs)
+            if self.hair_back == "back hair type 1":
+                self.hair_back_fill = "back_hair_colour_1.png"
+                self.hair_back_lines = "back_hair_lines_1.png"
+            if self.hair_back == "back hair type 2":
+                self.hair_back_fill = "back_hair_colour_2.png"
+                self.hair_back_lines = "back_hair_lines_2.png"
+            self.eye_type = random.choice(eye_types)
+            if self.eye_type == "eye type 1":
+                self.eye_back = "eyes_under_1 a.png"
+                self.eye_fill = "eyes_colour_1 a.png"
+                self.eye_lines = "eyes_lines_1 a.png"
+            if self.eye_type == "eye type 2":
+                self.eye_back = "eyes_under_2 a.png"
+                self.eye_fill = "eyes_colour_2 a.png"
+                self.eye_lines = "eyes_lines_2 a.png"
+            self.hair_front = random.choice(hair_fronts)
+            if self.hair_front == "front hair type 1":
+                self.hair_front_fill = "hair_colour_1.png"
+                self.hair_front_lines = "hair_lines_1.png"
+            if self.hair_front == "front hair type 2":
+                self.hair_front_fill = "hair_colour_2.png"
+                self.hair_front_lines = "hair_lines_2.png"
+            self.mouth_closed_N = "mouth a_neut"
+            self.mouth_open_N = "mouth b_neut"
+
             self.facts = random.sample(facts, 3)
             self.name = random.choice(names)
             self.affection = 0
