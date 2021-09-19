@@ -63,9 +63,10 @@ init python:
 
     class Char:
         def __init__(self):
-            self.face = random.choice(faces)
-            self.body = random.choice(bodies)
-            self.hair_front = random.choice(hair_fronts)
-            self.hair_back = random.choice(hair_backs)
-            self.hair_colours = random.choice(hair_colours)
-            self.eye_colour = random.choice(eye_colours)
+            # self.face = random.choice(faces)
+            # self.body = random.choice(bodies)
+            # self.hair_front = random.choice(hair_fronts)
+            # self.hair_back = random.choice(hair_backs)
+            # self.hair_colours = random.choice(hair_colours)
+            # self.eye_colour = random.choice(eye_colours)
+            self.affection = 0
