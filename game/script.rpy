@@ -14,7 +14,7 @@ define C2 = 0.0
 define C3 = 0.0
 define C4 = 0.0
 define affection = 0
-
+define C5 = "#FFFFFF"
 # The game starts here.
 
 label start:
@@ -70,6 +70,7 @@ label date_start:
     $ C2 = char1.eye_colour
     $ C3 = char1.shirt_colour_a
     $ C4 = char1.shirt_colour_b
+    $ C5 = char1.skin_colour
     $ affection = char1.affection
 
 
@@ -95,6 +96,7 @@ label date_start:
         matrixcolor HueMatrix(C4)
     show expression char1.body_colour_c_N as body_colour_c_N:
         zoom imagez xalign imagex yalign imagey
+        matrixcolor TintMatrix(C5)
     show expression char1.body_lines_N as body_lines_N:
         zoom imagez xalign imagex yalign imagey
     #body drawn
@@ -128,19 +130,19 @@ label date_start:
     #affection meter
     if affection == -2:
         show affection_meter 6:
-            zoom 0.7 xpos 900 ypos 425
+            zoom 0.7 xpos 875 ypos 425
     if affection == -1:
         show affection_meter 5:
-            zoom 0.7 xpos 900 ypos 425
+            zoom 0.7 xpos 875 ypos 425
     if affection == 0:
         show affection_meter 4:
-            zoom 0.7 xpos 900 ypos 425
+            zoom 0.7 xpos 875 ypos 425
     if affection == 1:
         show affection_meter 3:
-            zoom 0.7 xpos 900 ypos 425
+            zoom 0.7 xpos 875 ypos 425
     if affection == 2:
         show affection_meter 2:
-            zoom 0.7 xpos 900 ypos 425
+            zoom 0.7 xpos 875 ypos 425
 
 
     # Set information
@@ -185,31 +187,32 @@ label date_start:
                 matrixcolor HueMatrix(C4)
             show expression char1.body_colour_c_H as body_colour_c_H behind hair_front_fill1:
                 zoom imagez xalign imagex yalign imagey
+                matrixcolor TintMatrix(C5)
             show expression char1.body_lines_H as body_lines_H behind hair_front_fill1:
                 zoom imagez xalign imagex yalign imagey
 
 
             if affection == -3:
-                show affection_meter 6:
-                    zoom 0.7 xpos 900 ypos 425
+                show affection_meter 7:
+                    zoom 0.7 xpos 875 ypos 425
             if affection == -2:
                 show affection_meter 6:
-                    zoom 0.7 xpos 900 ypos 425
+                    zoom 0.7 xpos 875 ypos 425
             if affection == -1:
                 show affection_meter 5:
-                    zoom 0.7 xpos 900 ypos 425
+                    zoom 0.7 xpos 875 ypos 425
             if affection == 0:
                 show affection_meter 4:
-                    zoom 0.7 xpos 900 ypos 425
+                    zoom 0.7 xpos 875 ypos 425
             if affection == 1:
                 show affection_meter 3:
-                    zoom 0.7 xpos 900 ypos 425
+                    zoom 0.7 xpos 875 ypos 425
             if affection == 2:
                 show affection_meter 2:
-                    zoom 0.7 xpos 900 ypos 425
-            if affection == -3:
-                show affection_meter 6:
-                    zoom 0.7 xpos 900 ypos 425
+                    zoom 0.7 xpos 875 ypos 425
+            if affection == 3:
+                show affection_meter 1:
+                    zoom 0.7 xpos 875 ypos 425
 
             #hide screen countdown
             a "Good! I like you more now."
@@ -245,31 +248,32 @@ label date_start:
                 matrixcolor HueMatrix(C4)
             show expression char1.body_colour_c_A as body_colour_c_A behind hair_front_fill1:
                 zoom imagez xalign imagex yalign imagey
+                matrixcolor TintMatrix(C5)
             show expression char1.body_lines_A as body_lines_A behind hair_front_fill1:
                 zoom imagez xalign imagex yalign imagey
 
 
             if affection == -3:
-                show affection_meter 6:
-                    zoom 0.7 xpos 900 ypos 425
+                show affection_meter 7:
+                    zoom 0.7 xpos 875 ypos 425
             if affection == -2:
                 show affection_meter 6:
-                    zoom 0.7 xpos 900 ypos 425
+                    zoom 0.7 xpos 875 ypos 425
             if affection == -1:
                 show affection_meter 5:
-                    zoom 0.7 xpos 900 ypos 425
+                    zoom 0.7 xpos 875 ypos 425
             if affection == 0:
                 show affection_meter 4:
-                    zoom 0.7 xpos 900 ypos 425
+                    zoom 0.7 xpos 875 ypos 425
             if affection == 1:
                 show affection_meter 3:
-                    zoom 0.7 xpos 900 ypos 425
+                    zoom 0.7 xpos 875 ypos 425
             if affection == 2:
                 show affection_meter 2:
-                    zoom 0.7 xpos 900 ypos 425
-            if affection == -3:
-                show affection_meter 6:
-                    zoom 0.7 xpos 900 ypos 425
+                    zoom 0.7 xpos 875 ypos 425
+            if affection == 3:
+                show affection_meter 1:
+                    zoom 0.7 xpos 875 ypos 425
 
             #hide screen countdown
             a "Well that's a shame. I like you less now."
@@ -312,8 +316,33 @@ label out_of_time:
             matrixcolor HueMatrix(C4)
         show expression char1.body_colour_c_H as body_colour_c_H behind hair_front_fill1:
             zoom imagez xalign imagex yalign imagey
+            matrixcolor TintMatrix(C5)
         show expression char1.body_lines_H as body_lines_H behind hair_front_fill1:
             zoom imagez xalign imagex yalign imagey
+
+        $ affection += 1
+        if affection == -3:
+            show affection_meter 7:
+                zoom 0.7 xpos 875 ypos 425
+        if affection == -2:
+            show affection_meter 6:
+                zoom 0.7 xpos 875 ypos 425
+        if affection == -1:
+            show affection_meter 5:
+                zoom 0.7 xpos 875 ypos 425
+        if affection == 0:
+            show affection_meter 4:
+                zoom 0.7 xpos 875 ypos 425
+        if affection == 1:
+            show affection_meter 3:
+                zoom 0.7 xpos 875 ypos 425
+        if affection == 2:
+            show affection_meter 2:
+                zoom 0.7 xpos 875 ypos 425
+        if affection == 3:
+            show affection_meter 1:
+                zoom 0.7 xpos 875 ypos 425
+
         a "INSERT POSITIVE RESPONSE TO SILENCE"
         $ char1.affection += 1
 
@@ -344,8 +373,31 @@ label out_of_time:
             matrixcolor HueMatrix(C4)
         show expression char1.body_colour_c_A as body_colour_c_A behind hair_front_fill1:
             zoom imagez xalign imagex yalign imagey
+            matrixcolor TintMatrix(C5)
         show expression char1.body_lines_A as body_lines_A behind hair_front_fill1:
             zoom imagez xalign imagex yalign imagey
+        $ affection -= 1
+        if affection == -3:
+            show affection_meter 7:
+                zoom 0.7 xpos 900 ypos 425
+        if affection == -2:
+            show affection_meter 6:
+                zoom 0.7 xpos 900 ypos 425
+        if affection == -1:
+            show affection_meter 5:
+                zoom 0.7 xpos 900 ypos 425
+        if affection == 0:
+            show affection_meter 4:
+                zoom 0.7 xpos 900 ypos 425
+        if affection == 1:
+            show affection_meter 3:
+                zoom 0.7 xpos 900 ypos 425
+        if affection == 2:
+            show affection_meter 2:
+                zoom 0.7 xpos 900 ypos 425
+        if affection == 3:
+            show affection_meter 1:
+                zoom 0.7 xpos 900 ypos 425
 
         a "INSERT NEGATIVE RESPONSE TO SILENCE"
         $ char1.affection -= 1
