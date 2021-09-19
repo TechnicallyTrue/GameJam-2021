@@ -141,12 +141,24 @@ label date_start:
         a "[current_question.q_text]"
 
         "[current_question.good_answer]":
-
+            show expression char1.blush as blush:
+                zoom imagez xalign imagex yalign imagey
+                alpha 0.5
             #hide screen countdown
             a "Good! I like you more now."
             $ char1.affection += 1
 
         "[current_question.bad_answer]":
+            hide mouth_closed_N
+            hide eyebrow_colour_N
+            hide eyebrow_lines_N
+            show expression char1.mouth_closed_A as mouth_closed_A:
+                zoom imagez xalign imagex yalign imagey
+            show expression char1.eyebrow_colour_A as eyebrow_colour_A behind hair_front_fill2:
+                zoom imagez xalign imagex yalign imagey
+                matrixcolor HueMatrix(C)
+            show expression char1.eyebrow_lines_A as eyebrow_lines_A behind hair_front_fill2:
+                zoom imagez xalign imagex yalign imagey
 
             #hide screen countdown
             a "Well that's a shame. I like you less now."

@@ -67,9 +67,13 @@ init python:
             if self.face == "face 1":
                 self.eyebrow_colour_N = "eyebrows_colour neut.png"
                 self.eyebrow_lines_N = "eyebrows_lines_1 neut.png"
+                self.eyebrow_colour_A = "eyebrows_colour angry.png"
+                self.eyebrow_lines_A = "eyebrows_lines_1 angry.png"
             if self.face == "face 2":
                 self.eyebrow_colour_N = "eyebrows_colour neut.png"
                 self.eyebrow_lines_N = "eyebrows_lines_2 neut.png"
+                self.eyebrow_colour_A = "eyebrows_colour angry.png"
+                self.eyebrow_lines_A = "eyebrows_lines_2 angry.png"
             self.body = random.choice(bodies)
             if self.body == "body 1":
                 self.back_shirt_colour_a = "back_shirt_colour_a_1.png"
@@ -91,6 +95,17 @@ init python:
                 self.body_colour_b_N = "body_colour_b_2 neut.png"
                 self.body_colour_c_N = "body_colour_c_2 neut.png"
                 self.body_lines_N= "body_lines_2 neut.png"
+            if self.body == "body 3":
+                self.back_shirt_colour_a = "back_shirt_colour_a_3.png"
+                self.back_shirt_colour_b = "empty.png"
+                self.back_shirt_lines = "back_shirt_lines_3.png"
+                self.body_colour_a_N = "body_colour_a_3 neut.png"
+                #self.body_colour_a_A = "back_shirt_lines_1.png"
+                #self.body_colour_a_H = "back_shirt_lines_1.png"
+                self.body_colour_b_N = "body_colour_b_3 neut.png"
+                self.body_colour_c_N = "body_colour_c_3 neut.png"
+                self.body_lines_N= "body_lines_3 neut.png"
+
             self.hair_back = random.choice(hair_backs)
             if self.hair_back == "back hair type 1":
                 self.hair_back_fill = "back_hair_colour_1.png"
@@ -139,8 +154,11 @@ init python:
             self.shirt_colour_b = renpy.random.randint(0, 360)
 
 
-            self.mouth_closed_N = "mouth a_neut"
-            self.mouth_open_N = "mouth b_neut"
+            self.mouth_closed_N = "mouth a_neut.png"
+            self.mouth_open_N = "mouth b_neut.png"
+            self.mouth_closed_A = "mouth a_angry.png"
+            self.mouth_open_A = "mouth b_angry.png"
+            self.blush = "blush.png"
 
             self.facts = random.sample(facts, 3)
             self.name = random.choice(names)
