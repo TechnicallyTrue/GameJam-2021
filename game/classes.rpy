@@ -117,14 +117,14 @@ init python:
                 self.body_colour_b_N = "body_colour_b_3 neut.png"
                 self.body_colour_c_N = "body_colour_c_3 neut.png"
                 self.body_colour_a_A = "body_colour_a_3 neut.png"
-                self.body_colour_b_A = "body_colour_b_3 neut.png"
-                self.body_colour_c_A = "body_colour_c_3 neut.png"
+                self.body_colour_b_A = "body_colour_b_3 angry.png"
+                self.body_colour_c_A = "body_colour_c_3 angry.png"
                 self.body_colour_a_H = "body_colour_a_3 neut.png"
-                self.body_colour_b_H = "body_colour_b_3 neut.png"
-                self.body_colour_c_H = "body_colour_c_3 neut.png"
+                self.body_colour_b_H = "body_colour_b_3 happy.png"
+                self.body_colour_c_H = "body_colour_c_3 happy.png"
                 self.body_lines_N = "body_lines_3 neut.png"
-                self.body_lines_A = "body_lines_3 neut.png"
-                self.body_lines_H = "body_lines_3 neut.png"
+                self.body_lines_A = "body_lines_3 angry.png"
+                self.body_lines_H = "body_lines_3 happy.png"
 
 
             self.hair_back = random.choice(hair_backs)
