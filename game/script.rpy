@@ -19,6 +19,10 @@ define C5 = "#FFFFFF"
 
 label start:
 
+    stop music fadeout 0.5
+
+    $ renpy.music.set_volume(0.5)
+
     # Set custom pause menu
     $ _game_menu_screen = "pause_menu"
 
@@ -54,6 +58,8 @@ label tutorial:
     c "But be warned - looking at the menu doesn't pause the ceaseless march of time!"
     c "There's no pausing ~loooooooooooooooooooooooooooooooove~!"
     c "Ok bye!"
+
+    play music gameplay_final loop fadeout 1
 
 label date_start:
 
@@ -288,9 +294,11 @@ label date_start:
 label check_end_condition:
 
     if char1.affection <= -3:
+        play music ending_final fadeout 1
         jump bad_game_over
 
     if char1.affection >= 3:
+        play music ending_final fadeout 1
         jump good_game_over
 
     $ score += 1
