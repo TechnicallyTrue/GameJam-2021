@@ -173,6 +173,7 @@ init python:
             self.eye_colour = renpy.random.randint(0, 360)
             self.shirt_colour_a = renpy.random.randint(0, 360)
             self.shirt_colour_b = renpy.random.randint(0, 360)
+            self.skin_colour = random.choice(skin_colours)
 
 
             self.mouth_closed_N = "mouth a_neut.png"

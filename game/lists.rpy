@@ -114,7 +114,6 @@ init python:
             "My back is just a minefield of knots. I need to see a chiro")
         ])
     ]
-
     names = ["Aiden", "Alex", "Sam", "Pat", "Kelly", "Kris", "Lee", "Shaun",
              "Steph", "Jasper", "Sky", "River", "Charlie", "Khaleesi", "Max",
              "Tony", "Avery", "Emrey", "Ari", "Cameron", "Sam", "Tatum",
@@ -124,10 +123,10 @@ init python:
              "Gerry", "Santana", "Hunter", "Elliot", "Jude", "Aubrey", "Gray",
              "Jordan", "Morgan", "Reese", "Riley", "Robin", "Sawyer", "Shae",
              "Shiloh"]
-
     hair_backs = ["back hair type 1", "back hair type 2", "back hair type 3", "back hair type 4", "back hair type 5"]
     hair_fronts = ["front hair type 1", "front hair type 2", "front hair type 3", "front hair type 4", "front hair type 5"]
     eye_types = ["eye type 1", "eye type 2"]
+    skin_colours = ["#dab9ab", "#ffe9e3", "#e3b69a", "#b0714f", "#8f6751", "#c9997f", "#855840"]
     bodies = ["body 1", "body 2", "body 3"]
     faces = ["face 1", "face 2"]
 
