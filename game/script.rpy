@@ -30,7 +30,13 @@ label start:
     scene bg room
     show table
 
-    $ char1 = Char()
+label date_start:
+
+    $ char1 = random.choice(chars)
+
+    if char1 == "NULL":
+        $ char1 = Char()
+
     show expression char1.hair_back_fill as hair_back_fill behind table:
         zoom imagez xalign imagex yalign imagey
     show expression char1.hair_back_lines as hair_back_lines behind table:
@@ -76,61 +82,33 @@ label start:
         zoom imagez xalign imagex yalign imagey
 
 
-    #     xalign imagex yalign imagey zoom imagez
-    # show blush_1:
-    #     alpha 0.5
-    #     xalign imagex yalign imagey zoom imagez
-    # show expression 'hair_colour_2.png' as hair_colour:
-    #     xalign imagex yalign imagey
-    #     zoom imagez
-    # show eyes_under_2 b:
-    #     xalign imagex yalign imagey zoom imagez
-    # show eyes_colour_2 b:
-    #     xalign imagex yalign imagey zoom imagez
-    # show eyes_lines_2 b:
-    #     xalign imagex yalign imagey zoom imagez
-    # show eyebrows_colour_1 neut:
-    #     xalign imagex yalign imagey zoom imagez
-    # show mouth a_neut:
-    #     xalign imagex yalign imagey zoom imagez
-    # show eyebrows_lines_1 neut:
-    #     xalign imagex yalign imagey zoom imagez
-    # show hair_colour_2:
-    #     alpha 0.5
-    #     xalign imagex yalign imagey zoom imagez
-    # show hair_lines_2:
-    #     xalign imagex yalign imagey zoom imagez
+    # Set information
 
-    $ namevar = "Man with Covid"
-
-    #show cat neutral behind table
-
+    $ namevar = char1.name
     show screen info (char1.name, char1.facts)
 
-    # These display lines of dialogue.
+    # Pick the question
 
-    a "Hello. This is placeholder dialogue."
+    $ current_question = random.choice(random.choice(char1.facts).questions)
 
-    a "I EXIS T ONLY TO KILL I EX IST ON LY TO KIL L I EX IS T ONLY T O KILL I EX IST ONLY T O KILL I EXIS T ONLY TO KI LL"
+    # TODO: Set timer
+
+    # Ask the question
 
     menu:
-        "That seems bad.":
+        a "[current_question.q_text]"
 
-            a "I do not care."
+        "[current_question.good_answer]":
 
-        "Great! I crave death.":
+            a "Good! I like you more now."
+            $ char1.affection += 1
 
-            a "Well that works out for both of us."
+        "[current_question.bad_answer]":
 
-            $ namevar = "Old Character"
+            a "Well that's a shame. I like you less now."
+            $ char1.affection -= 1
 
-    "The cat murders you."
-
-    define b = Character("New Character")
-
-    b "Hello! Oh, am I interrupting something?"
-
-    a "Not really, no."
+    "Current affection: [char1.affection]"
 
     # This ends the game.
 
