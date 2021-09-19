@@ -12,7 +12,7 @@
 ##
 ## The _() surrounding the string marks it as eligible for translation.
 
-define config.name = _("GameJam2021")
+define config.name = _("Gamophobia")
 
 
 ## Determines if the title given above is shown on the main menu screen. Set
@@ -29,7 +29,7 @@ define config.version = "1.0"
 ## Text that is placed on the game's about screen. Place the text between the
 ## triple-quotes, and leave a blank line between paragraphs.
 
-define gui.about = _p("""
+define gui.about = _p("""Made by Christine, Sean, and Vivian, with a little help from Jeff.
 """)
 
 
@@ -37,7 +37,7 @@ define gui.about = _p("""
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
 ## or semicolons.
 
-define build.name = "GameJam2021"
+define build.name = "Gamophobia"
 
 
 ## Sounds and music ############################################################
