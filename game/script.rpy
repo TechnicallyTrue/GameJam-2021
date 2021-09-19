@@ -22,6 +22,9 @@ label start:
     # games because of course why wouldn't it AHHHHHHHHHHHHHHHHHHHH
     $ chars = ["NULL"]
 
+    # Set score to 0
+    $ score = 0
+
     # Set the scene
     scene bg room
     show table
@@ -30,7 +33,7 @@ label tutorial:
 
     show cat neutral behind table
 
-    c "Hello, and welcome to GAME NAME!"
+    c "Hello, and welcome to the Cafe Gamophobia!"
     c "I'm Dr. Whiskers, and I've got a PhD in ~love~"
     c "And a minor in paleoanthropology."
     c "Over the course of your evening here, we're going to match you up with several potential suitors."
@@ -168,8 +171,13 @@ label date_start:
 
 label check_end_condition:
 
-    if char1.affection <= -3 or char1.affection >= 3:
-        jump game_over
+    if char1.affection <= -3:
+        jump bad_game_over
+
+    if char1.affection >= 3:
+        jump good_game_over
+
+    $ score += 1
 
     jump date_start
 
@@ -186,8 +194,35 @@ label out_of_time:
 
     jump check_end_condition
 
-label game_over:
+label good_game_over:
 
-    "GAME OVER"
+    hide screen info
+
+    a "Why don't we get out of here?"
+
+    "The two of you leave and have a lovely, decidedly finite time together."
+
+    jump ending
+
+label bad_game_over:
+
+    scene bg room
+    show table
+
+    show cat neutral behind table
+
+    c "Hi there! Sorry, but it seems you're not mixing well with some of the others here."
+    c "Maybe try your luck another day."
+    c "In the meantime, GET OUT! You're harshing the vibe!"
+
+    "You are swiftly ejected from the premises."
+
+    jump ending
+
+label ending:
+
+    "You lasted [score] rounds in Cafe Gamophobia."
+
+    "THE END"
 
     return
