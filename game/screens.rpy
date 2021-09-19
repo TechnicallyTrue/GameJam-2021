@@ -310,7 +310,7 @@ screen pause_menu:
         yalign 0.5
         top_padding 60
         bottom_padding 60
-        background Frame("gui/TestBox.png", gui.info_card_borders, tile=gui.info_card_tile)
+        background Frame("gui/pausemenu.png", gui.info_card_borders, tile=gui.info_card_tile)
         vbox:
             xanchor 0.5
             yanchor 0.5
