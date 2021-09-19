@@ -1,4 +1,5 @@
-facts = [
+init python:
+    facts = [
         Fact("Likes cats", [
             Question("Are you a cat person or a dog person?", "Cat person",
                     "Dog person"),
