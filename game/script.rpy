@@ -4,6 +4,12 @@
 # name of the character.
 
 define a = DynamicCharacter("namevar")
+define imagex = 1.0
+define imagey = 0.6
+define imagez = 0.75
+define hairColour = random(0.0,360.0)
+define eyeColour = random(0.0,360.0)
+define config.gl2 = True
 
 # python:
 #     facts = [
@@ -16,7 +22,6 @@ define a = DynamicCharacter("namevar")
 #     ]
 
 
-
 # The game starts here.
 
 label start:
@@ -24,27 +29,50 @@ label start:
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
-
     scene bg room
     show table
-    show backhaircolour_1 behind table
-    show backhairlines_1 behind table
-    show backshirtcolour_1 behind table
-    show bodycoloura_1 happy
-    show bodycolourb_1 happy
-    show bodycolourc_1 happy
-    show bodylines_1 happy
+    show back_hair_colour_1 behind table:
+        zoom imagez xalign imagex yalign imagey
+        #matrixcolour HueMatrix(hairColour)
+    show back_hair_lines_1 behind table:
+        xalign imagex yalign imagey zoom imagez
+    show back_shirt_colour_a_1 behind table:
+        xalign imagex yalign imagey zoom imagez
+    show back_shirt_colour_b_1 behind table:
+        xalign imagex yalign imagey zoom imagez
+    show back_shirt_lines_1 behind table:
+        xalign imagex yalign imagey zoom imagez
+    show body_colour_a_1 happy:
+        xalign imagex yalign imagey zoom imagez
+    show body_colour_b_1 happy:
+        xalign imagex yalign imagey zoom imagez
+    show body_colour_c_1 happy:
+        xalign imagex yalign imagey zoom imagez
+    show body_lines_1 happy:
+        xalign imagex yalign imagey zoom imagez
     show blush_1:
         alpha 0.5
-    show haircolour2
-    show eyesunder2 a
-    show eyescolour2 a
-    show eyeslines2 a
-    show eyebrowscolour_1 neut
-    show eyebrowslines_1 neut
-    show haircolour2:
+        xalign imagex yalign imagey zoom imagez
+    show expression 'hair_colour_2.png' as hair_colour:
+        xalign imagex yalign imagey
+        zoom imagez
+    show eyes_under_2 b:
+        xalign imagex yalign imagey zoom imagez
+    show eyes_colour_2 b at eye_shade:
+        xalign imagex yalign imagey zoom imagez
+    show eyes_lines_2 b:
+        xalign imagex yalign imagey zoom imagez
+    show eyebrows_colour_1 neut:
+        xalign imagex yalign imagey zoom imagez
+    show mouth a_neut:
+        xalign imagex yalign imagey zoom imagez
+    show eyebrows_lines_1 neut:
+        xalign imagex yalign imagey zoom imagez
+    show hair_colour_2:
         alpha 0.5
-    show hairlines2
+        xalign imagex yalign imagey zoom imagez
+    show hair_lines_2:
+        xalign imagex yalign imagey zoom imagez
 
     $ namevar = "Man with Covid"
 
