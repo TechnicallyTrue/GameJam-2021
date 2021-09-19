@@ -291,7 +291,7 @@ screen info(name, facts):
             xalign 0.5
             spacing 22
 
-            text name
+            text name xalign 0.5
             for fact in facts:
                 text fact.f_text
 
@@ -385,7 +385,7 @@ screen navigation():
         style_prefix "navigation"
 
         xalign 0.5
-        yalign 0.7
+        yalign 0.55
 
         spacing gui.navigation_spacing
 
