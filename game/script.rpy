@@ -30,12 +30,13 @@ label start:
     scene bg room
     show table
 
-label date_start:
+#label date_start:
 
     $ char1 = random.choice(chars)
 
     if char1 == "NULL":
         $ char1 = Char()
+        $ chars.append(char1)
 
     show expression char1.hair_back_fill as hair_back_fill behind table:
         zoom imagez xalign imagex yalign imagey
@@ -110,6 +111,17 @@ label date_start:
 
     "Current affection: [char1.affection]"
 
+
+
+    if char1.affection <= -3 or char1.affection >= 3:
+        jump game_over
+
+    jump start
+
     # This ends the game.
+
+label game_over:
+
+    "GAME OVER"
 
     return
