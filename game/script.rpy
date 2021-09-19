@@ -9,20 +9,13 @@ define imagey = 0.6
 define imagez = 0.75
 define config.gl2 = True
 define C = 0.0
-# python:
-#     facts = [
-#         Fact("Likes cats"), [
-#             Question("Are you a cat person or a dog person?", "Cat person",
-#                     "Dog person"),
-#             Question("Do you think cats are secretly evil?", "No", "Yes"),
-#             Question("Would you be open to adopting a cat?", "Yes", "No")
-#         ]
-#     ]
-
 
 # The game starts here.
 
 label start:
+
+    # Set custom pause menu
+    $ _game_menu_screen = "pause_menu"
 
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
@@ -31,7 +24,10 @@ label start:
     show table
 
 
-#label date_start:
+label date_start:
+
+    scene bg room
+    show table
 
     $ char1 = random.choice(chars)
 
@@ -108,7 +104,12 @@ label start:
 
     $ current_question = random.choice(random.choice(char1.facts).questions)
 
-    # TODO: Set timer
+    # Set timer
+
+    $ timeout = 4.0
+    #$ timer_range = 2.5
+    $ timeout_label = "out_of_time"
+    #show screen countdown
 
     # Ask the question
 
@@ -117,24 +118,37 @@ label start:
 
         "[current_question.good_answer]":
 
+            #hide screen countdown
             a "Good! I like you more now."
             $ char1.affection += 1
 
         "[current_question.bad_answer]":
 
+            #hide screen countdown
             a "Well that's a shame. I like you less now."
             $ char1.affection -= 1
 
     "Current affection: [char1.affection]"
 
-
+label check_end_condition:
 
     if char1.affection <= -3 or char1.affection >= 3:
         jump game_over
 
-    jump start
+    jump date_start
 
-    # This ends the game.
+label out_of_time:
+
+    $ res = random.randint(1,2)
+
+    if res == 1:
+        a "INSERT POSITIVE RESPONSE TO SILENCE"
+        $ char1.affection += 1
+    else:
+        a "INSERT NEGATIVE RESPONSE TO SILENCE"
+        $ char1.affection -= 1
+
+    jump check_end_condition
 
 label game_over:
 

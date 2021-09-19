@@ -210,6 +210,24 @@ screen choice(items):
     hbox:
         for i in items:
             textbutton i.caption action i.action
+    if timeout_label is not None:
+        bar:
+            xalign 0.5
+            ypos 50
+            xsize 740
+            value AnimatedValue(old_value=1.0, value=0.0, range=1.0, delay=timeout)
+        timer timeout action [SetVariable("timeout", 10), Jump(timeout_label)]
+
+# transform alpha_dissolve:
+#     alpha 0.0
+#     linear 0.5 alpha 1.0
+#     on hide:
+#         linear 0.5 alpha 0
+#     # This is to fade the bar in and out, and is only required once in your script
+#
+# screen countdown:
+#     timer 0.01 repeat True action If(time > 0, true=SetVariable('time', time - 0.01), false=[Hide('countdown'), Jump(timer_jump)])
+#     bar value time range timer_range xalign 0.5 yalign 0.9 xmaximum 300 at alpha_dissolve # This is the timer bar.
 
 
 ## When this is true, menu captions will be spoken by the narrator. When false,
@@ -277,10 +295,32 @@ screen info(name, facts):
             for fact in facts:
                 text fact.f_text
 
-## Info Button screen ##########################################################
+## Pause screen ##########################################################
 ##
-## The info button allows the user to show/hide the info card.
+## The screen that comes up when you pause.
 
+screen pause_menu:
+
+    window:
+        xsize 640
+        ysize 540
+        xanchor 0.5
+        yanchor 0.5
+        xalign 0.5
+        yalign 0.5
+        top_padding 60
+        bottom_padding 60
+        background Frame("gui/TestBox.png", gui.info_card_borders, tile=gui.info_card_tile)
+        vbox:
+            xanchor 0.5
+            yanchor 0.5
+            xalign 0.5
+            yalign 0.5
+            spacing 22
+
+            text "description!"
+            text "button1"
+            text "button2"
 
 # ## Quick Menu screen ###########################################################
 # ##
