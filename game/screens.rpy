@@ -204,12 +204,19 @@ style input:
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#choice
 
+default random_choices = False
+
 screen choice(items):
     style_prefix "choice"
 
+    python:
+        if random_choices == False:
+            random.shuffle(items)
+            random_choices = True
+
     hbox:
         for i in items:
-            textbutton i.caption action i.action
+            textbutton i.caption action [SetVariable("random_choices", False), i.action]
     if timeout_label is not None:
         bar:
             xalign 0.5
