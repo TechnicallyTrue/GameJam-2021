@@ -1,5 +1,4 @@
 init python:
-    likes_cats = -1
     facts = [
         Fact("Likes cats", [
             Question("Are you a cat person or a dog person?", "Cat person",
@@ -42,45 +41,6 @@ init python:
 
     ]
 
-    neg_facts = [
-        Fact("Hates cats", [
-            Question("Do you like any animals?", "No", "Yes"),
-            Question("Do you prefer dogs?", "Nope!", "Yap!"),
-            Question("Who hurt you", "A cat.", "Yes")
-        ]),
-        Fact("Hates chess", [
-            Question("Are you a computer?", "No", "Beep beep boop"),
-            Question("What are your preferred games?", "I play no games",
-            "Sports 'n stuff")
-            Question("Would you prefer to CHECK me out?", "Please get away from me.", "Haha ha. Ha.")
-        ]),
-        Fact("Has gorgeous, sparkling lungs" [
-            Question("What do you treat your lungs with?",
-            "Just fresh air and exercise", "Asbestos"),
-            Question("May I please have one of your lungs when you die?",
-            "You are a psychopath, aren't you?",
-            "*blushes* Why YES."),
-            Question("Would you be okay if I smoked in here?",
-            "What a filthy habit...", "My lungs are steel. Smoke away!")
-        ]),
-        Fact("Does not eat snails" [
-            Question("Do you enjoy consuming molluscs?", "No", "Yes"),
-            Question("Whats wet, rubbery and full of slime?", "Snails, ew.", "..."),
-            Question("Is my fancy French meal just a joke to you?",
-            "Snails are a gross thing to eat", "YOU are a gross thing to eat")
-        ]),
-        Fact("Denies COVID exists", [
-            Question("What's your favourite food?", "Horse dewormer",
-            "Pool cleaner"),
-            Question("What do you do in your free time?", "Block off hospitals",
-            "Save small businesses by wasting tons of their food and time")
-            Question("Can I take my mask off?", "Yes", "Yes")
-        ]),
-        Fact("Dislikes reading", [
-            Question("What was your favourite subject in school?", "Math", "PE"),
-            Question("Do you like watching TV?", "No", "Yes"),
-            Question("Do you read tweets?", "tl;dr", "Occasionally")
-        ])
-    ]
+
 
     names = ["Aiden", "Alex", "Sam", "Pat", "Kelly", "Kris"]
