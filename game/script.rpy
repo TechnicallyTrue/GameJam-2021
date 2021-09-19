@@ -29,48 +29,53 @@ label start:
     # images directory to show it.
     scene bg room
     show table
-    show back_hair_colour_1 behind table:
-        zoom imagez xalign imagex yalign imagey
-        #matrixcolour HueMatrix(hairColour)
-    show back_hair_lines_1 behind table:
-        xalign imagex yalign imagey zoom imagez
-    show back_shirt_colour_a_1 behind table:
-        xalign imagex yalign imagey zoom imagez
-    show back_shirt_colour_b_1 behind table:
-        xalign imagex yalign imagey zoom imagez
-    show back_shirt_lines_1 behind table:
-        xalign imagex yalign imagey zoom imagez
-    show body_colour_a_1 happy:
-        xalign imagex yalign imagey zoom imagez
-    show body_colour_b_1 happy:
-        xalign imagex yalign imagey zoom imagez
-    show body_colour_c_1 happy:
-        xalign imagex yalign imagey zoom imagez
-    show body_lines_1 happy:
-        xalign imagex yalign imagey zoom imagez
-    show blush_1:
-        alpha 0.5
-        xalign imagex yalign imagey zoom imagez
-    show expression 'hair_colour_2.png' as hair_colour:
-        xalign imagex yalign imagey
-        zoom imagez
-    show eyes_under_2 b:
-        xalign imagex yalign imagey zoom imagez
-    show eyes_colour_2 b:
-        xalign imagex yalign imagey zoom imagez
-    show eyes_lines_2 b:
-        xalign imagex yalign imagey zoom imagez
-    show eyebrows_colour_1 neut:
-        xalign imagex yalign imagey zoom imagez
-    show mouth a_neut:
-        xalign imagex yalign imagey zoom imagez
-    show eyebrows_lines_1 neut:
-        xalign imagex yalign imagey zoom imagez
-    show hair_colour_2:
-        alpha 0.5
-        xalign imagex yalign imagey zoom imagez
-    show hair_lines_2:
-        xalign imagex yalign imagey zoom imagez
+
+    $ char1 = Char()
+    show expression char1.eye_colour as eye_colour
+    #show _char1.eye_colour
+
+    # show back_hair_colour_1 behind table:
+    #     zoom imagez xalign imagex yalign imagey
+    #     #matrixcolour HueMatrix(hairColour)
+    # show back_hair_lines_1 behind table:
+    #     xalign imagex yalign imagey zoom imagez
+    # show back_shirt_colour_a_1 behind table:
+    #     xalign imagex yalign imagey zoom imagez
+    # show back_shirt_colour_b_1 behind table:
+    #     xalign imagex yalign imagey zoom imagez
+    # show back_shirt_lines_1 behind table:
+    #     xalign imagex yalign imagey zoom imagez
+    # show body_colour_a_1 happy:
+    #     xalign imagex yalign imagey zoom imagez
+    # show body_colour_b_1 happy:
+    #     xalign imagex yalign imagey zoom imagez
+    # show body_colour_c_1 happy:
+    #     xalign imagex yalign imagey zoom imagez
+    # show body_lines_1 happy:
+    #     xalign imagex yalign imagey zoom imagez
+    # show blush_1:
+    #     alpha 0.5
+    #     xalign imagex yalign imagey zoom imagez
+    # show expression 'hair_colour_2.png' as hair_colour:
+    #     xalign imagex yalign imagey
+    #     zoom imagez
+    # show eyes_under_2 b:
+    #     xalign imagex yalign imagey zoom imagez
+    # show eyes_colour_2 b:
+    #     xalign imagex yalign imagey zoom imagez
+    # show eyes_lines_2 b:
+    #     xalign imagex yalign imagey zoom imagez
+    # show eyebrows_colour_1 neut:
+    #     xalign imagex yalign imagey zoom imagez
+    # show mouth a_neut:
+    #     xalign imagex yalign imagey zoom imagez
+    # show eyebrows_lines_1 neut:
+    #     xalign imagex yalign imagey zoom imagez
+    # show hair_colour_2:
+    #     alpha 0.5
+    #     xalign imagex yalign imagey zoom imagez
+    # show hair_lines_2:
+    #     xalign imagex yalign imagey zoom imagez
 
     $ namevar = "Man with Covid"
 
