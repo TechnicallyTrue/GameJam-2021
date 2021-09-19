@@ -8,7 +8,7 @@ define imagex = 1.0
 define imagey = 0.6
 define imagez = 0.75
 define config.gl2 = True
-
+define C = 0.0
 # python:
 #     facts = [
 #         Fact("Likes cats"), [
@@ -30,6 +30,7 @@ label start:
     scene bg room
     show table
 
+
 #label date_start:
 
     $ char1 = random.choice(chars)
@@ -38,21 +39,31 @@ label start:
         $ char1 = Char()
         $ chars.append(char1)
 
+    $ C = char1.hair_colour
     show expression char1.hair_back_fill as hair_back_fill behind table:
         zoom imagez xalign imagex yalign imagey
+        matrixcolor HueMatrix(C)
     show expression char1.hair_back_lines as hair_back_lines behind table:
         zoom imagez xalign imagex yalign imagey
+    $ C = char1.shirt_colour_a
     show expression char1.back_shirt_colour_a as back_shirt_colour_a behind table:
         zoom imagez xalign imagex yalign imagey
+        matrixcolor HueMatrix(C)
+    $ C = char1.shirt_colour_b
     show expression char1.back_shirt_colour_b as back_shirt_colour_b behind table:
         zoom imagez xalign imagex yalign imagey
+        matrixcolor HueMatrix(C)
     show expression char1.back_shirt_lines as back_shirt_lines behind table:
         zoom imagez xalign imagex yalign imagey
     #Draws back hair and body behind table
+    $ C = char1.shirt_colour_a
     show expression char1.body_colour_a_N as body_colour_a_N:
         zoom imagez xalign imagex yalign imagey
+        matrixcolor HueMatrix(C)
+    $ C = char1.shirt_colour_b
     show expression char1.body_colour_b_N as body_colour_b_N:
         zoom imagez xalign imagex yalign imagey
+        matrixcolor HueMatrix(C)
     show expression char1.body_colour_c_N as body_colour_c_N:
         zoom imagez xalign imagex yalign imagey
     show expression char1.body_lines_N as body_lines_N:
@@ -61,16 +72,20 @@ label start:
 
     show expression char1.hair_front_fill as hair_front_fill1:
         zoom imagez xalign imagex yalign imagey
+        matrixcolor HueMatrix(C)
     #hair front fill 1
     show expression char1.eye_back as eye_back:
         zoom imagez xalign imagex yalign imagey
+    $ C = char1.eye_colour
     show expression char1.eye_fill as eye_fill:
         zoom imagez xalign imagex yalign imagey
+        matrixcolor HueMatrix(C)
     show expression char1.eye_lines as eye_lines:
         zoom imagez xalign imagex yalign imagey
-    #show _char1.eye_colour
+    $ C = char1.hair_colour
     show expression char1.eyebrow_colour_N as eyebrow_colour_N:
         zoom imagez xalign imagex yalign imagey
+        matrixcolor HueMatrix(C)
     show expression char1.eyebrow_lines_N as eyebrow_lines_N:
         zoom imagez xalign imagex yalign imagey
     show expression char1.mouth_closed_N as mouth_closed_N:
@@ -79,6 +94,7 @@ label start:
     show expression char1.hair_front_fill as hair_front_fill2:
         zoom imagez xalign imagex yalign imagey
         alpha 0.5
+        matrixcolor HueMatrix(C)
     show expression char1.hair_front_lines as hair_front_lines:
         zoom imagez xalign imagex yalign imagey
 
