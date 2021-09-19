@@ -4,6 +4,7 @@
 # name of the character.
 
 define a = DynamicCharacter("namevar")
+define c = Character("Dr. Whiskers")
 define imagex = 1.0
 define imagey = 0.6
 define imagez = 0.75
@@ -17,12 +18,35 @@ label start:
     # Set custom pause menu
     $ _game_menu_screen = "pause_menu"
 
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
+    # Clear the list of characters because apparently that persists between
+    # games because of course why wouldn't it AHHHHHHHHHHHHHHHHHHHH
+    $ chars = ["NULL"]
+
+    # Set the scene
     scene bg room
     show table
 
+label tutorial:
+
+    show cat neutral behind table
+
+    c "Hello, and welcome to GAME NAME!"
+    c "I'm Dr. Whiskers, and I've got a PhD in ~love~"
+    c "And a minor in paleoanthropology."
+    c "Over the course of your evening here, we're going to match you up with several potential suitors."
+    c "They'll probably ask you some questions to make sure you're a compatible date."
+    c "Make sure to answer nice and promptly - nothing worse than an awkward silence!"
+    c "(Unless you're into that)"
+    c "((No judgement here))"
+    c "(((Ok a little bit of judgement)))"
+    c "Try not to offend anyone too badly - if someone takes a real strong disliking to you, we might just have to boot you out."
+    c "On the other hand, if someone takes a shine to you, they'll probably want to take you away themselves!"
+    c "I guess if you were some kind of crazy person who wanted to be here for an I N F I N I T E length of time, you'd have to, I dunno, keep everyone sort of neutral towards you?"
+    c "But that'd be weird, wouldn't it? This isn't a game, you know ;)"
+    c "Alright! I'll leave you to it! Remember that you can hit the ESC key or right click to bring up the menu."
+    c "But be warned - looking at the menu doesn't pause the ceaseless march of time!"
+    c "There's no pausing ~loooooooooooooooooooooooooooooooove~!"
+    c "Ok bye!"
 
 label date_start:
 
