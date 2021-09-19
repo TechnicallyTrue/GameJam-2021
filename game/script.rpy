@@ -7,8 +7,6 @@ define a = DynamicCharacter("namevar")
 define imagex = 1.0
 define imagey = 0.6
 define imagez = 0.75
-define hairColour = random(0.0,360.0)
-define eyeColour = random(0.0,360.0)
 define config.gl2 = True
 
 # python:
@@ -58,7 +56,7 @@ label start:
         zoom imagez
     show eyes_under_2 b:
         xalign imagex yalign imagey zoom imagez
-    show eyes_colour_2 b at eye_shade:
+    show eyes_colour_2 b:
         xalign imagex yalign imagey zoom imagez
     show eyes_lines_2 b:
         xalign imagex yalign imagey zoom imagez
