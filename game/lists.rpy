@@ -103,7 +103,7 @@ init python:
             "I have been here always been here for always", "We are all new")
         ]),
         Fact("Vanilla in the bedroom", [
-            Question("Do you like chocolate?", "No. Only vanilla", 
+            Question("Do you like chocolate?", "No. Only vanilla",
             "Yes, but only if it also contains vanilla"),
             Question("What is your favourite pillow vendor?",
             "I sleep on alcohol tinctures of an orchid's seedpods", "Endy"),
@@ -115,8 +115,8 @@ init python:
 
     names = ["Aiden", "Alex", "Sam", "Pat", "Kelly", "Kris"]
 
-    hair_backs = ["back hair type 1", "back hair type 2"]
-    hair_fronts = ["front hair type 1", "front hair type 2"]
+    hair_backs = ["back hair type 1", "back hair type 2", "back hair type 3", "back hair type 4", "back hair type 5"]
+    hair_fronts = ["front hair type 1", "front hair type 2", "front hair type 3", "front hair type 4", "front hair type 5"]
     eye_types = ["eye type 1", "eye type 2"]
     bodies = ["body 1", "body 2"]
     faces = ["face 1", "face 2"]

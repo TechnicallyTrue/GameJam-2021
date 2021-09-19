@@ -98,6 +98,15 @@ init python:
             if self.hair_back == "back hair type 2":
                 self.hair_back_fill = "back_hair_colour_2.png"
                 self.hair_back_lines = "back_hair_lines_2.png"
+            if self.hair_back == "back hair type 3":
+                self.hair_back_fill = "back_hair_colour_3.png"
+                self.hair_back_lines = "back_hair_lines_3.png"
+            if self.hair_back == "back hair type 4":
+                self.hair_back_fill = "back_hair_colour_4.png"
+                self.hair_back_lines = "back_hair_lines_4.png"
+            if self.hair_back == "back hair type 5":
+                self.hair_back_fill = "back_hair_colour_5.png"
+                self.hair_back_lines = "back_hair_lines_5.png"
             self.eye_type = random.choice(eye_types)
             if self.eye_type == "eye type 1":
                 self.eye_back = "eyes_under_1 a.png"
@@ -114,6 +123,22 @@ init python:
             if self.hair_front == "front hair type 2":
                 self.hair_front_fill = "hair_colour_2.png"
                 self.hair_front_lines = "hair_lines_2.png"
+            if self.hair_front == "front hair type 3":
+                self.hair_front_fill = "hair_colour_3.png"
+                self.hair_front_lines = "hair_lines_3.png"
+            if self.hair_front == "front hair type 4":
+                self.hair_front_fill = "hair_colour_4.png"
+                self.hair_front_lines = "hair_lines_4.png"
+            if self.hair_front == "front hair type 5":
+                self.hair_front_fill = "hair_colour_5.png"
+                self.hair_front_lines = "hair_lines_5.png"
+
+            self.hair_colour = renpy.random.randint(0, 360)
+            self.eye_colour = renpy.random.randint(0, 360)
+            self.shirt_colour_a = renpy.random.randint(0, 360)
+            self.shirt_colour_b = renpy.random.randint(0, 360)
+
+
             self.mouth_closed_N = "mouth a_neut"
             self.mouth_open_N = "mouth b_neut"
 
