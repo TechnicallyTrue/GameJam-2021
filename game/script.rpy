@@ -9,7 +9,10 @@ define imagex = 1.0
 define imagey = 0.6
 define imagez = 0.75
 define config.gl2 = True
-define C = 0.0
+define C1 = 0.0
+define C2 = 0.0
+define C3 = 0.0
+define C4 = 0.0
 
 # The game starts here.
 
@@ -62,31 +65,31 @@ label date_start:
         $ char1 = Char()
         $ chars.append(char1)
 
-    $ C = char1.hair_colour
+    $ C1 = char1.hair_colour
+    $ C2 = char1.eye_colour
+    $ C3 = char1.shirt_colour_a
+    $ C4 = char1.shirt_colour_b
+
     show expression char1.hair_back_fill as hair_back_fill behind table:
         zoom imagez xalign imagex yalign imagey
-        matrixcolor HueMatrix(C)
+        matrixcolor HueMatrix(C1)
     show expression char1.hair_back_lines as hair_back_lines behind table:
         zoom imagez xalign imagex yalign imagey
-    $ C = char1.shirt_colour_a
     show expression char1.back_shirt_colour_a as back_shirt_colour_a behind table:
         zoom imagez xalign imagex yalign imagey
-        matrixcolor HueMatrix(C)
-    $ C = char1.shirt_colour_b
+        matrixcolor HueMatrix(C3)
     show expression char1.back_shirt_colour_b as back_shirt_colour_b behind table:
         zoom imagez xalign imagex yalign imagey
-        matrixcolor HueMatrix(C)
+        matrixcolor HueMatrix(C4)
     show expression char1.back_shirt_lines as back_shirt_lines behind table:
         zoom imagez xalign imagex yalign imagey
     #Draws back hair and body behind table
-    $ C = char1.shirt_colour_a
     show expression char1.body_colour_a_N as body_colour_a_N:
         zoom imagez xalign imagex yalign imagey
-        matrixcolor HueMatrix(C)
-    $ C = char1.shirt_colour_b
+        matrixcolor HueMatrix(C3)
     show expression char1.body_colour_b_N as body_colour_b_N:
         zoom imagez xalign imagex yalign imagey
-        matrixcolor HueMatrix(C)
+        matrixcolor HueMatrix(C4)
     show expression char1.body_colour_c_N as body_colour_c_N:
         zoom imagez xalign imagex yalign imagey
     show expression char1.body_lines_N as body_lines_N:
@@ -95,20 +98,18 @@ label date_start:
 
     show expression char1.hair_front_fill as hair_front_fill1:
         zoom imagez xalign imagex yalign imagey
-        matrixcolor HueMatrix(C)
+        matrixcolor HueMatrix(C1)
     #hair front fill 1
     show expression char1.eye_back as eye_back:
         zoom imagez xalign imagex yalign imagey
-    $ C = char1.eye_colour
     show expression char1.eye_fill as eye_fill:
         zoom imagez xalign imagex yalign imagey
-        matrixcolor HueMatrix(C)
+        matrixcolor HueMatrix(C2)
     show expression char1.eye_lines as eye_lines:
         zoom imagez xalign imagex yalign imagey
-    $ C = char1.hair_colour
     show expression char1.eyebrow_colour_N as eyebrow_colour_N:
         zoom imagez xalign imagex yalign imagey
-        matrixcolor HueMatrix(C)
+        matrixcolor HueMatrix(C1)
     show expression char1.eyebrow_lines_N as eyebrow_lines_N:
         zoom imagez xalign imagex yalign imagey
     show expression char1.mouth_closed_N as mouth_closed_N:
@@ -117,7 +118,7 @@ label date_start:
     show expression char1.hair_front_fill as hair_front_fill2:
         zoom imagez xalign imagex yalign imagey
         alpha 0.5
-        matrixcolor HueMatrix(C)
+        matrixcolor HueMatrix(C1)
     show expression char1.hair_front_lines as hair_front_lines:
         zoom imagez xalign imagex yalign imagey
 
@@ -144,9 +145,27 @@ label date_start:
         a "[current_question.q_text]"
 
         "[current_question.good_answer]":
+            hide mouth_closed_N
+            hide body_colour_a_N
+            hide body_colour_b_N
+            hide body_colour_c_N
+            hide body_lines_N
+
             show expression char1.blush as blush:
                 zoom imagez xalign imagex yalign imagey
                 alpha 0.5
+            show expression char1.body_colour_a_H as body_colour_a_H behind hair_front_fill1:
+                zoom imagez xalign imagex yalign imagey
+                matrixcolor HueMatrix(C3)
+            show expression char1.mouth_open_N as mouth_open_N:
+                zoom imagez xalign imagex yalign imagey
+            show expression char1.body_colour_b_H as body_colour_b_H behind hair_front_fill1:
+                zoom imagez xalign imagex yalign imagey
+                matrixcolor HueMatrix(C4)
+            show expression char1.body_colour_c_H as body_colour_c_H behind hair_front_fill1:
+                zoom imagez xalign imagex yalign imagey
+            show expression char1.body_lines_H as body_lines_H behind hair_front_fill1:
+                zoom imagez xalign imagex yalign imagey
             #hide screen countdown
             a "Good! I like you more now."
             $ char1.affection += 1
@@ -155,12 +174,30 @@ label date_start:
             hide mouth_closed_N
             hide eyebrow_colour_N
             hide eyebrow_lines_N
+            hide body_colour_a_N
+            hide body_colour_b_N
+            hide body_colour_c_N
+            hide body_colour_a_H
+            hide body_colour_b_H
+            hide body_colour_c_H
+            hide body_lines_N
+
             show expression char1.mouth_closed_A as mouth_closed_A:
                 zoom imagez xalign imagex yalign imagey
             show expression char1.eyebrow_colour_A as eyebrow_colour_A behind hair_front_fill2:
                 zoom imagez xalign imagex yalign imagey
-                matrixcolor HueMatrix(C)
+                matrixcolor HueMatrix(C1)
             show expression char1.eyebrow_lines_A as eyebrow_lines_A behind hair_front_fill2:
+                zoom imagez xalign imagex yalign imagey
+            show expression char1.body_colour_a_A as body_colour_a_A behind hair_front_fill1:
+                zoom imagez xalign imagex yalign imagey
+                matrixcolor HueMatrix(C3)
+            show expression char1.body_colour_b_A as body_colour_b_A behind hair_front_fill1:
+                zoom imagez xalign imagex yalign imagey
+                matrixcolor HueMatrix(C4)
+            show expression char1.body_colour_c_A as body_colour_c_A behind hair_front_fill1:
+                zoom imagez xalign imagex yalign imagey
+            show expression char1.body_lines_A as body_lines_A behind hair_front_fill1:
                 zoom imagez xalign imagex yalign imagey
 
             #hide screen countdown
@@ -186,9 +223,59 @@ label out_of_time:
     $ res = random.randint(1,2)
 
     if res == 1:
+        hide mouth_closed_N
+        hide body_colour_a_N
+        hide body_colour_b_N
+        hide body_colour_c_N
+        hide body_lines_N
+        show expression char1.blush as blush:
+            zoom imagez xalign imagex yalign imagey
+            alpha 0.5
+        show expression char1.body_colour_a_H as body_colour_a_H behind hair_front_fill1:
+            zoom imagez xalign imagex yalign imagey
+            matrixcolor HueMatrix(C3)
+        show expression char1.mouth_open_N as mouth_open_N:
+            zoom imagez xalign imagex yalign imagey
+        show expression char1.body_colour_b_H as body_colour_b_H behind hair_front_fill1:
+            zoom imagez xalign imagex yalign imagey
+            matrixcolor HueMatrix(C4)
+        show expression char1.body_colour_c_H as body_colour_c_H behind hair_front_fill1:
+            zoom imagez xalign imagex yalign imagey
+        show expression char1.body_lines_H as body_lines_H behind hair_front_fill1:
+            zoom imagez xalign imagex yalign imagey
         a "INSERT POSITIVE RESPONSE TO SILENCE"
         $ char1.affection += 1
+
     else:
+        hide mouth_closed_N
+        hide eyebrow_colour_N
+        hide eyebrow_lines_N
+        hide body_colour_a_N
+        hide body_colour_b_N
+        hide body_colour_c_N
+        hide body_colour_a_H
+        hide body_colour_b_H
+        hide body_colour_c_H
+        hide body_lines_N
+
+        show expression char1.mouth_closed_A as mouth_closed_A:
+            zoom imagez xalign imagex yalign imagey
+        show expression char1.eyebrow_colour_A as eyebrow_colour_A behind hair_front_fill2:
+            zoom imagez xalign imagex yalign imagey
+            matrixcolor HueMatrix(C1)
+        show expression char1.eyebrow_lines_A as eyebrow_lines_A behind hair_front_fill2:
+            zoom imagez xalign imagex yalign imagey
+        show expression char1.body_colour_a_A as body_colour_a_A behind hair_front_fill1:
+            zoom imagez xalign imagex yalign imagey
+            matrixcolor HueMatrix(C3)
+        show expression char1.body_colour_b_A as body_colour_b_A behind hair_front_fill1:
+            zoom imagez xalign imagex yalign imagey
+            matrixcolor HueMatrix(C4)
+        show expression char1.body_colour_c_A as body_colour_c_A behind hair_front_fill1:
+            zoom imagez xalign imagex yalign imagey
+        show expression char1.body_lines_A as body_lines_A behind hair_front_fill1:
+            zoom imagez xalign imagex yalign imagey
+
         a "INSERT NEGATIVE RESPONSE TO SILENCE"
         $ char1.affection -= 1
 
