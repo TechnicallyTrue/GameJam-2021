@@ -26,12 +26,29 @@ label start:
     # images directory to show it.
 
     scene bg room
-
     show table
+    show backhaircolour_1 behind table
+    show backhairlines_1 behind table
+    show backshirtcolour_1 behind table
+    show bodycoloura_1 happy
+    show bodycolourb_1 happy
+    show bodycolourc_1 happy
+    show bodylines_1 happy
+    show blush_1:
+        alpha 0.5
+    show haircolour2
+    show eyesunder2 a
+    show eyescolour2 a
+    show eyeslines2 a
+    show eyebrowscolour_1 neut
+    show eyebrowslines_1 neut
+    show haircolour2:
+        alpha 0.5
+    show hairlines2
 
     $ namevar = "Man with Covid"
 
-    show cat neutral behind table
+    #show cat neutral behind table
 
     show screen info ("Testy test", ["A", "B", "C"])
 
