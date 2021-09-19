@@ -37,6 +37,21 @@ init python:
             "Mostly online"),
             Question("Have you ever had an overdue library book?", "Never!",
             "I owe a small fortune in late fees")
+        ]),
+        Fact("Enjoys screaming into the void", [
+            Question("What is your favourite song?", "Nothing", "Screaming"),
+            Question("Do you enjoy screamo?", "No", "AHHHHHHHHHH!!!"),
+            Question("Do you have any other hobbies?", "Too busy screaming",
+            "YeaAAAAHHHHHHHhhhHHH!!")
+        ]),
+        Fact("Has some odd tastes in the bedroom", [
+            Question("Do you like duvets?", "I prefer lying on bare mattress",
+            "They make my bed feel cozy"),
+            Question("How many stuffies do you have?",
+            "I do not have stuffies. The stuffies have ME",
+            "Too many to count!"),
+            Question("What is your opinion on memory foam?",
+            "It's quite delicious", "I sleep on it sometimes")
         ])
     ]
 
@@ -78,6 +93,23 @@ init python:
             Question("What was your favourite subject in school?", "Math", "PE"),
             Question("Do you like watching TV?", "No", "Yes"),
             Question("Do you read tweets?", "tl;dr", "Occasionally")
+        ]),
+        Fact("Prefers the cold silence of eternity", [
+            Question("What is your favourite song?", "...",
+            "Music is just a futile attempt to delay entropy?"),
+            Question("Do the stars call to you?", "I refuse to answer. Text instead",
+            "I cannot say"),
+            Question("Where were you when I was new?",
+            "I have been here always been here for always", "We are all new")
+        ]),
+        Fact("Vanilla in the bedroom", [
+            Question("Do you like chocolate?", "No. Only vanilla", 
+            "Yes, but only if it also contains vanilla"),
+            Question("What is your favourite pillow vendor?",
+            "I sleep on alcohol tinctures of an orchid's seedpods", "Endy"),
+            Question("How kinky are you in bed?",
+            "My back is just a minefield of knots. I need to see a chiro.",
+            "I find that sleeping on hard surfaces really works out all the kinks")
         ])
     ]
 
