@@ -13,6 +13,7 @@ define C1 = 0.0
 define C2 = 0.0
 define C3 = 0.0
 define C4 = 0.0
+define affection = 0
 
 # The game starts here.
 
@@ -69,6 +70,8 @@ label date_start:
     $ C2 = char1.eye_colour
     $ C3 = char1.shirt_colour_a
     $ C4 = char1.shirt_colour_b
+    $ affection = char1.affection
+
 
     show expression char1.hair_back_fill as hair_back_fill behind table:
         zoom imagez xalign imagex yalign imagey
@@ -113,7 +116,7 @@ label date_start:
     show expression char1.eyebrow_lines_N as eyebrow_lines_N:
         zoom imagez xalign imagex yalign imagey
     show expression char1.mouth_closed_N as mouth_closed_N:
-            zoom imagez xalign imagex yalign imagey
+        zoom imagez xalign imagex yalign imagey
     #face drawn
     show expression char1.hair_front_fill as hair_front_fill2:
         zoom imagez xalign imagex yalign imagey
@@ -121,6 +124,23 @@ label date_start:
         matrixcolor HueMatrix(C1)
     show expression char1.hair_front_lines as hair_front_lines:
         zoom imagez xalign imagex yalign imagey
+
+    #affection meter
+    if affection == -2:
+        show affection_meter 6:
+            zoom 0.7 xpos 900 ypos 425
+    if affection == -1:
+        show affection_meter 5:
+            zoom 0.7 xpos 900 ypos 425
+    if affection == 0:
+        show affection_meter 4:
+            zoom 0.7 xpos 900 ypos 425
+    if affection == 1:
+        show affection_meter 3:
+            zoom 0.7 xpos 900 ypos 425
+    if affection == 2:
+        show affection_meter 2:
+            zoom 0.7 xpos 900 ypos 425
 
 
     # Set information
@@ -151,6 +171,7 @@ label date_start:
             hide body_colour_c_N
             hide body_lines_N
 
+            $ affection += 1
             show expression char1.blush as blush:
                 zoom imagez xalign imagex yalign imagey
                 alpha 0.5
@@ -166,9 +187,34 @@ label date_start:
                 zoom imagez xalign imagex yalign imagey
             show expression char1.body_lines_H as body_lines_H behind hair_front_fill1:
                 zoom imagez xalign imagex yalign imagey
+
+
+            if affection == -3:
+                show affection_meter 6:
+                    zoom 0.7 xpos 900 ypos 425
+            if affection == -2:
+                show affection_meter 6:
+                    zoom 0.7 xpos 900 ypos 425
+            if affection == -1:
+                show affection_meter 5:
+                    zoom 0.7 xpos 900 ypos 425
+            if affection == 0:
+                show affection_meter 4:
+                    zoom 0.7 xpos 900 ypos 425
+            if affection == 1:
+                show affection_meter 3:
+                    zoom 0.7 xpos 900 ypos 425
+            if affection == 2:
+                show affection_meter 2:
+                    zoom 0.7 xpos 900 ypos 425
+            if affection == -3:
+                show affection_meter 6:
+                    zoom 0.7 xpos 900 ypos 425
+
             #hide screen countdown
             a "Good! I like you more now."
             $ char1.affection += 1
+                #affection meter
 
         "[current_question.bad_answer]":
             hide mouth_closed_N
@@ -181,6 +227,8 @@ label date_start:
             hide body_colour_b_H
             hide body_colour_c_H
             hide body_lines_N
+
+            $ affection -= 1
 
             show expression char1.mouth_closed_A as mouth_closed_A:
                 zoom imagez xalign imagex yalign imagey
@@ -199,6 +247,29 @@ label date_start:
                 zoom imagez xalign imagex yalign imagey
             show expression char1.body_lines_A as body_lines_A behind hair_front_fill1:
                 zoom imagez xalign imagex yalign imagey
+
+
+            if affection == -3:
+                show affection_meter 6:
+                    zoom 0.7 xpos 900 ypos 425
+            if affection == -2:
+                show affection_meter 6:
+                    zoom 0.7 xpos 900 ypos 425
+            if affection == -1:
+                show affection_meter 5:
+                    zoom 0.7 xpos 900 ypos 425
+            if affection == 0:
+                show affection_meter 4:
+                    zoom 0.7 xpos 900 ypos 425
+            if affection == 1:
+                show affection_meter 3:
+                    zoom 0.7 xpos 900 ypos 425
+            if affection == 2:
+                show affection_meter 2:
+                    zoom 0.7 xpos 900 ypos 425
+            if affection == -3:
+                show affection_meter 6:
+                    zoom 0.7 xpos 900 ypos 425
 
             #hide screen countdown
             a "Well that's a shame. I like you less now."

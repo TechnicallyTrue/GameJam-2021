@@ -111,7 +111,7 @@ init python:
 
             if self.body == "body 3":
                 self.back_shirt_colour_a = "back_shirt_colour_a_3.png"
-                self.back_shirt_colour_b = "back_shirt_lines_3.png"
+                self.back_shirt_colour_b = "back_shirt_colour_b_3.png"
                 self.back_shirt_lines = "back_shirt_lines_3.png"
                 self.body_colour_a_N = "body_colour_a_3 neut.png"
                 self.body_colour_b_N = "body_colour_b_3 neut.png"
