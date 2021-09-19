@@ -131,3 +131,25 @@ init python:
     faces = ["face 1", "face 2"]
 
     chars = ["NULL"]
+
+    pos_responses = ["Oh nice! We agree on that, then.",
+                    "Seems we've got something in common.",
+                    "I knew there was something about you I liked.",
+                    "You're saying all the right things.",
+                    "Finally! Someone who gets it."]
+    neg_responses = ["You've got to be joking.",
+                    "Hm. I'm not sure if this will work, then.",
+                    "I guess we're going to have to agree to disagree on that.",
+                    "What? That doesn't even make sense. Why?",
+                    "What are you talking about?"]
+
+    pos_timeout = ["Ooh, the silent type, hm? I like that.",
+                    "Smart move. Don't rush your answer.",
+                    "Very wise. Sometimes no answer is the best answer.",
+                    "You're right. Silence is nice."]
+    neg_timeout = ["Hello? Did you hear me?",
+                    "Come on now, we don't have all day.",
+                    "...you're a bit slow, aren't you?",
+                    "Ok fine, don't answer.",
+                    "I didn't think the question was that hard.",
+                    "Were you just planning to waste my time, then?"]

@@ -153,6 +153,10 @@ label date_start:
     # Pick the question
 
     $ current_question = random.choice(random.choice(char1.facts).questions)
+    $ pos_response = random.choice(pos_responses)
+    $ neg_response = random.choice(neg_responses)
+    $ pos_timeout_res = random.choice(pos_timeout)
+    $ neg_timeout_res = random.choice(neg_timeout)
 
     # Set timer
 
@@ -215,7 +219,7 @@ label date_start:
                     zoom 0.7 xpos 875 ypos 425
 
             #hide screen countdown
-            a "Good! I like you more now."
+            a "[pos_response]"
             $ char1.affection += 1
                 #affection meter
 
@@ -276,7 +280,7 @@ label date_start:
                     zoom 0.7 xpos 875 ypos 425
 
             #hide screen countdown
-            a "Well that's a shame. I like you less now."
+            a "[neg_response]"
             $ char1.affection -= 1
 
     #"Current affection: [char1.affection]"
@@ -343,7 +347,7 @@ label out_of_time:
             show affection_meter 1:
                 zoom 0.7 xpos 875 ypos 425
 
-        a "INSERT POSITIVE RESPONSE TO SILENCE"
+        a "[pos_timeout_res]"
         $ char1.affection += 1
 
     else:
@@ -399,7 +403,7 @@ label out_of_time:
             show affection_meter 1:
                 zoom 0.7 xpos 900 ypos 425
 
-        a "INSERT NEGATIVE RESPONSE TO SILENCE"
+        a "[neg_timeout_res]"
         $ char1.affection -= 1
 
     jump check_end_condition
