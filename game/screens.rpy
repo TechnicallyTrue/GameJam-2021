@@ -136,7 +136,7 @@ style window:
     yalign gui.textbox_yalign
     ysize gui.textbox_height
 
-    background Image("gui/textbox.png", xalign=0.5, yalign=1.0)
+    background Image("gui/hearttextbox.png", xalign=0.5, yalign=1.0)
 
 style namebox:
     xpos gui.name_xpos
@@ -285,7 +285,7 @@ screen info(name, facts):
         yanchor 0.5
         top_padding 60
         bottom_padding 60
-        background Frame("gui/TestBox.png", gui.info_card_borders, tile=gui.info_card_tile)
+        background Frame("gui/HeartBox.png", gui.info_card_borders, tile=gui.info_card_tile)
         vbox:
             xanchor 0.5
             xalign 0.5
@@ -1525,7 +1525,7 @@ screen quick_menu():
 
 style window:
     variant "small"
-    background "gui/phone/textbox.png"
+    background "gui/phone/hearttextbox.png"
 
 style radio_button:
     variant "small"
