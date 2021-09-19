@@ -318,9 +318,12 @@ screen pause_menu:
             yalign 0.5
             spacing 22
 
-            text "description!"
-            text "button1"
-            text "button2"
+            text ("Answer your dates' questions! But don't let any one of them get" +
+            " too attached - you want to keep speed dating as long as possible!"):
+                xalign 0.5
+                text_align 0.5
+            textbutton "Resume Game" action Return() xalign 0.5
+            textbutton "Quit" action MainMenu() xalign 0.5
 
 # ## Quick Menu screen ###########################################################
 # ##
