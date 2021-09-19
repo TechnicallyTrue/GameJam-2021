@@ -84,3 +84,9 @@ init python:
     ]
 
     names = ["Aiden", "Alex", "Sam", "Pat", "Kelly", "Kris"]
+
+    hair_backs = ["back hair type 1", "back hair type 2"]
+    hair_fronts = ["front hair type 1", "front hair type 2"]
+    eye_types = ["eye type 1", "eye type 2"]
+    bodies = ["body 1", "body 2"]
+    faces = ["face 1", "face 2"]
