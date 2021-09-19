@@ -63,10 +63,13 @@ init python:
 
     class Char:
         def __init__(self):
-            # self.face = random.choice(faces)
-            # self.body = random.choice(bodies)
+            # self.face = random.choice(faces)  <--  this is the easiest way to randomly
+            # self.body = random.choice(bodies)      select something from a list
             # self.hair_front = random.choice(hair_fronts)
             # self.hair_back = random.choice(hair_backs)
             # self.hair_colours = random.choice(hair_colours)
             # self.eye_colour = random.choice(eye_colours)
+            self.eye_colour = "eyes_colour_2 b.png"
+            self.facts = random.sample(facts, 3)
+            self.name = random.choice(names)
             self.affection = 0
